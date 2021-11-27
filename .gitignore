@@ -1,3 +1,6 @@
-.idea/workspace.xml
+# ZSH
 .zsh_history
+.zompdeump-*
 
+# Webstorm
+.idea/workspace.xml

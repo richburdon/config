@@ -1,0 +1,10 @@
+[core]
+	editor = vim
+	pager = cat
+
+[pull]
+	rebase = false
+
+[user]
+	name = Rich Burdon
+	email = rich.burdon@gmail.com

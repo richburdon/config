@@ -21,28 +21,6 @@ alias ll="ls -aog"
 
 alias home="cd $PROJECTS_HOME"
 
-# Chrome
-_profiles() {
-  if [ -z "$1" ]
-  then
-    DIR=$HOME/Library/Application\ Support/Google/Chrome
-    JQ='.profile.info_cache | keys[] as $k | "\($k) === \(.[$k].user_name)"'
-    cat $DIR/Local\ State | jq $JQ
-  else
-    PROF=$1
-    if [ "$PROF" = "0" ]
-    then
-      PROF=Default
-    else
-      PROF="Profile $PROF"
-    fi
-
-    open -n -a "Google Chrome" --args --profile-directory="$PROF"
-  fi
-}
-
-alias chrome=_profiles
-
 # TODO(burdon): npx @dxos/fu loc
 alias loc="find . -type d -name "node_modules" -prune -o -type d -name ".git" -prune -o -type d -name ".idea" -prune -o -type d -name "dist" -prune -o -type f -print | wc"
 
