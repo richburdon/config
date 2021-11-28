@@ -47,3 +47,10 @@ done
 #
 
 brew list -1 | xargs brew upgrade
+
+#
+# Extras
+#
+
+$(brew --prefix)/opt/fzf/install
+

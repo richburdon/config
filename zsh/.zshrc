@@ -2,6 +2,7 @@
 # $ZDOTDIR/.zshrc
 # Interactive shell configuration. Loaded after ~/.zshenv (which may set ZDOTDIR).
 # https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+# To reset: `exec zsh`
 #
 
 #
@@ -15,6 +16,12 @@ export PROJECTS_HOME="$HOME/Code/dxos"
 
 # GPG
 export KEY_SERVER="hkp://pool.sks-keyservers.net"
+
+# iTerm
+export DISABLE_AUTO_TITLE="true"
+
+export HISTSIZE=10000
+setopt EXTENDED_HISTORY
 
 #
 # Oh My Zsh
@@ -30,21 +37,19 @@ ZSH_THEME="avit"
 plugins=(
   dxos
   encode64              # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/encode64
-# fzf                   # CTRL+T to find files; CTRL+R to search history
+  fzf                   # CTRL+T to find files; CTRL+R to search history
   git
-# github                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/github
-# gpg-agent
   history               # Grep history: `h MATCH`
-# keychain
   macos                 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/osx (tab, cdf)
   web-search
   yarn
   z                     # Switch directory: `z MATCH`
   zsh-autosuggestions
-# ssh-agent
 )
 
-#ZSH_CUSTOM=~/.oh-my-zsh/custom/plugins
+export ZSH_CACHE_DIR=~/.zcompdump
+export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
+
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
 #
@@ -54,6 +59,8 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 # Smart history search.
 # https://github.com/junegunn/fzf/tree/c60ed1758315f0d993fbcbf04459944c87e19a48#installation
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 
 #
 # Dev
