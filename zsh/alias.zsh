@@ -13,11 +13,17 @@ alias gpg-keys="gpg --list-keys"
 alias gpg-search="gpg --keyserver=$KEY_SERVER --search-keys="
 
 alias gc="git commit -a --allow-empty-message -m ''"
+alias gmm="git fetch && git merge origin/main"
+alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 alias l="ls -og"
 alias ll="ls -aog"
 
 alias home="cd $PROJECTS_HOME"
+
+#
+# TODO(burdon): Move to x?
+#
 
 alias loc="find . -type d -name "node_modules" -prune -o -type d -name ".git" -prune -o -type d -name ".idea" -prune -o -type d -name "dist" -prune -o -type f -print | wc"
 

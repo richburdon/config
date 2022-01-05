@@ -10,6 +10,7 @@
 #
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 
 # Git
 export PROJECTS_HOME="$HOME/Code/dxos"
@@ -17,7 +18,7 @@ export PROJECTS_HOME="$HOME/Code/dxos"
 # GPG
 export KEY_SERVER="hkp://pool.sks-keyservers.net"
 
-# iTerm
+# iTerm2
 export DISABLE_AUTO_TITLE="true"
 
 export HISTSIZE=10000
@@ -28,9 +29,7 @@ setopt EXTENDED_HISTORY
 #
 
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="dxos"
-# ZSH_THEME="af-magic"
-ZSH_THEME="avit"
+ZSH_THEME="dxos"
 
 # https://github.com/robbyrussell/oh-my-zsh#plugins
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
@@ -70,6 +69,13 @@ export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 # https://github.com/nodenv/nodenv
 # NOTE: run `nodenv rehash` after installing global packages.
 eval "$(nodenv init -)"
+
+# https://github.com/Marik-D/monorepo-cd
+eval "$(monorepo-cd --init m)"
+
+# rbenv for Jekyll support.
+# https://jekyllrb.com/docs/installation/macos/#rbenv
+eval "$(rbenv init - zsh)"
 
 # Rust
 source "$HOME/.cargo/env"
