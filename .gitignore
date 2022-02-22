@@ -5,3 +5,10 @@
 
 # Webstorm
 .idea/workspace.xml
+
+# NodeJS
+node_modules/
+
+# General
+tmp/
+
