@@ -56,6 +56,7 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 #
 
 # Smart history search.
+# brew install fzf
 # https://github.com/junegunn/fzf/tree/c60ed1758315f0d993fbcbf04459944c87e19a48#installation
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -71,14 +72,18 @@ export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 eval "$(nodenv init -)"
 
 # https://github.com/Marik-D/monorepo-cd
-eval "$(monorepo-cd --init m)"
+# eval "$(monorepo-cd --init m)"
 
 # rbenv for Jekyll support.
 # https://jekyllrb.com/docs/installation/macos/#rbenv
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
 
 # Rust
-source "$HOME/.cargo/env"
+# https://www.rust-lang.org/tools/install
+# source "$HOME/.cargo/env"
+
+# Go
+# https://go.dev/doc/install
 
 #
 # Custom

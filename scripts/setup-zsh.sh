@@ -16,3 +16,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Link here.
 rm ~/.zsh
 ln -s ~/Code/richburdon/config/zsh ~/.zsh
+
+rm -rf ~/.zshenv
+echo 'ZDOTDIR="${ZDOTDIR:-$HOME/.zsh}"' > ~/.zshenv
