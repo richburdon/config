@@ -23,6 +23,7 @@ MODULES=(
   nodenv	      # https://github.com/nodenv/nodenv
   node-build
   openssl
+  pnpm
   zsh           # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 )
 
