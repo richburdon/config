@@ -36,3 +36,8 @@ alias help="_help"
 # Edit this file.
 alias zed="code ~/.zsh"
 alias up="exec zsh"
+
+# Rush
+alias ru="rush update"
+alias rb="rush build"
+
