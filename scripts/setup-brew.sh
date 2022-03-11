@@ -24,11 +24,12 @@ MODULES=(
   node-build
   openssl
   pnpm
-  zsh           # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  zsh           # https://ohmyz.sh
 )
 
 CASKS=(
   ipfs
+  ngrok         # https://dashboard.ngrok.com/get-started/setup
 )
 
 set -x
@@ -36,11 +37,11 @@ set -x
 brew update
 
 for module in "${MODULES[@]}"; do
-  brew install "$module"
+  brew install $module
 done
 
-for module in "${MODULES[@]}"; do
-  brew install "homebrew/cask/$module"
+for module in "${CASKS[@]}"; do
+  brew install --cask $module
 done
 
 #
@@ -54,4 +55,3 @@ brew list -1 | xargs brew upgrade
 #
 
 $(brew --prefix)/opt/fzf/install
-
