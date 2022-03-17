@@ -13,7 +13,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 
 # Git
-export PROJECTS_HOME="$HOME/Code/dxos"
+export DXOS_ROOT="$HOME/Code/dxos"
 
 # GPG
 export KEY_SERVER="hkp://pool.sks-keyservers.net"

@@ -15,7 +15,7 @@ alias gpg-search="gpg --keyserver=$KEY_SERVER --search-keys="
 alias l="ls -og"
 alias ll="ls -aog"
 
-alias home="cd $PROJECTS_HOME"
+alias home="cd $DXOS_ROOT"
 
 # TODO(burdon): Move to x?
 alias loc="find . -type d -name "node_modules" -prune -o -type d -name ".git" -prune -o -type d -name ".idea" -prune -o -type d -name "dist" -prune -o -type f -print | wc"
@@ -39,3 +39,22 @@ alias gs="git-branch-select -l"
 alias gc="git commit -a --allow-empty-message -m ''"
 alias gmm="git fetch && git merge origin/main"
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+
+# DXOS X
+_xdebug () {
+  case "$1" in
+
+  "on")
+    export DXTOOLS_COMMAND=$DXOS_ROOT/x/bin/dxtools.js
+    ;;
+
+  "off")
+    unset DXTOOLS_COMMAND
+    ;;
+
+  *)
+    x --version
+    ;;
+  esac
+}
+alias xdebug="_xdebug"
