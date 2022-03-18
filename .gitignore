@@ -2,6 +2,7 @@
 .zsh_history
 .zcompdump-*
 .zsh_sessions
+.zshrc.zwc
 
 # Webstorm
 .idea/workspace.xml

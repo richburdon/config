@@ -5,6 +5,8 @@
 # To reset: `exec zsh`
 #
 
+source '/Users/burdon/.zsh/antigen.zsh'
+
 #
 # ENV
 #
@@ -28,6 +30,13 @@ setopt EXTENDED_HISTORY
 # Oh My Zsh
 #
 
+antigen use oh-my-zsh
+
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
+
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="dxos"
 
@@ -43,7 +52,6 @@ plugins=(
   web-search
   yarn
   z                     # Switch directory: `z MATCH`
-  zsh-autosuggestions
 )
 
 export ZSH_CACHE_DIR=~/.zcompdump
