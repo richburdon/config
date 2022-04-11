@@ -17,7 +17,6 @@ chrome_profiles() {
 
   if [ -z "$1" ]
   then
-
     # Extract values.
     # https://stedolan.github.io/jq/tutorial
     JQ=".profile.info_cache | [to_entries[] | {profile:.key, name:.value.name, user_name:.value.user_name}]"
