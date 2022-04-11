@@ -28,8 +28,10 @@ setopt EXTENDED_HISTORY
 # Oh My Zsh
 #
 
+# TODO(burdon): Theme issues with Warp.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="dxos"
+#ZSH_THEME="dxos"
+ZSH_THEME="avit"
 
 # https://github.com/robbyrussell/oh-my-zsh#plugins
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins

@@ -39,3 +39,11 @@ alias gs="git-branch-select -l"
 alias gc="git commit -a --allow-empty-message -m ''"
 alias gmm="git fetch && git merge origin/main"
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+
+# GH
+# TODO(burdon): Move to X util.
+_ghfail() {
+  gh run view --log-failed $(gh run list --json databaseId,conclusion --jq '.[] | select(.conclusion=="failure") | .databaseId' | head -n 1) | grep FAILURE -A 8
+}
+
+alias ghfail="_ghfail"
