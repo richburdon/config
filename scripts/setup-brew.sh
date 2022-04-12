@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo
+echo "### BREW ###"
+echo
+
 #
 # New system set-up.
 #
@@ -8,6 +12,7 @@ if ! command -v brew &> /dev/null
 then
   echo "### Installing brew ###"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 MODULES=(
@@ -35,6 +40,8 @@ CASKS=(
 set -x
 
 brew update
+
+# TODO(burdon): Option to reinstall.
 
 for module in "${MODULES[@]}"; do
   brew install $module

@@ -12,4 +12,6 @@ node_modules/
 
 # General
 tmp/
+.DS_Store
+
 

@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo
+echo "### Git ###"
+echo
+
 cp -f ./config/.gitconfig ~/
 
 git config --global pager.branch false

@@ -30,22 +30,24 @@ setopt EXTENDED_HISTORY
 # Oh My Zsh
 #
 
-# TODO(burdon): Theme issues with Warp.
 antigen use oh-my-zsh
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen bundle ~/.oh-my-zsh/custom/plugins/dxos
+
 antigen apply
 
+# TODO(burdon): Theme issues with Warp.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="dxos"
 ZSH_THEME="avit"
 
+# TODO(burdon): Move to antigen.
 # https://github.com/robbyrussell/oh-my-zsh#plugins
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 plugins=(
-  dxos
   encode64              # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/encode64
   fzf                   # CTRL+T to find files; CTRL+R to search history
   git
