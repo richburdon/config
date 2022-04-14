@@ -2,6 +2,11 @@
 # Aliases
 #
 
+alias l="ls -og"
+alias ll="ls -aog"
+
+alias home="cd $DXOS_ROOT"
+
 # http://irtfweb.ifa.hawaii.edu/~lockhart/gpg
 # https://www.gnupg.org/gph/en/manual/book1.html
 _gpg_copy() {
@@ -11,11 +16,6 @@ _gpg_copy() {
 alias gpg-copy="_gpg_copy"
 alias gpg-keys="gpg --list-keys"
 alias gpg-search="gpg --keyserver=$KEY_SERVER --search-keys="
-
-alias l="ls -og"
-alias ll="ls -aog"
-
-alias home="cd $DXOS_ROOT"
 
 # TODO(burdon): Move to x?
 alias loc="find . -type d -name "node_modules" -prune -o -type d -name ".git" -prune -o -type d -name ".idea" -prune -o -type d -name "dist" -prune -o -type f -print | wc"
@@ -40,28 +40,5 @@ alias gc="git commit -a --allow-empty-message -m ''"
 alias gmm="git fetch && git merge origin/main"
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
-# GH
-# TODO(burdon): Move to X util.
-_ghfail() {
-  gh run view --log-failed $(gh run list --json databaseId,conclusion --jq '.[] | select(.conclusion=="failure") | .databaseId' | head -n 1) | grep FAILURE -A 8
-}
-
-alias ghfail="_ghfail"
-# DXOS X
-_xdebug () {
-  case "$1" in
-
-  "on")
-    export DXTOOLS_COMMAND=$DXOS_ROOT/x/bin/dxtools.js
-    ;;
-
-  "off")
-    unset DXTOOLS_COMMAND
-    ;;
-
-  *)
-    x --version
-    ;;
-  esac
-}
-alias xdebug="_xdebug"
+# https://github.com/nosarthur/gita
+alias gita="python3 -m gita"

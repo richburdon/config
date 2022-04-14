@@ -29,8 +29,12 @@
 	<false/>
 	<key>DisableWindowSizeSnap</key>
 	<false/>
+	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
 	<key>EnableProxyIcon</key>
 	<false/>
+	<key>FocusFollowsMouse</key>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideActivityIndicator</key>
@@ -1957,6 +1961,10 @@
 	<true/>
 	<key>TerminalMargin</key>
 	<integer>6</integer>
+	<key>ThreeFingerEmulates</key>
+	<true/>
+	<key>TimeBetweenTips</key>
+	<real>604800</real>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Snippets</string>
