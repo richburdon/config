@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo
+echo "### Git ###"
+echo
+
 cp -f ./config/.gitconfig ~/
 
 git config --global pager.branch false
@@ -11,4 +15,5 @@ gh config set pager cat
 npm install --global git-branch-select
 
 # https://github.com/nosarthur/gita
+# alias gita="python3 -m gita"
 pip3 install -U gita
