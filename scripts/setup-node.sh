@@ -23,6 +23,7 @@ softwareupdate --install-rosetta --agree-to-license
 
 NODE_VERSION=16.14.2
 
+# Required to see new versions of Node
 brew upgrade node-build
 
 npx @nodenv/nodenv-installer
@@ -30,6 +31,11 @@ nodenv install $NODE_VERSION
 nodenv global $NODE_VERSION
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 nodenv init
+
+# TODO(burdon): Upgrade to ARM once wrtc supported.
+# arch -arm64 brew reinstall nodenv
+# arch -arm64 nodenv install 16.14.2
+# node -e "console.log(process.arch)"
 
 npm install -g yarn
 
