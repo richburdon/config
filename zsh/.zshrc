@@ -35,6 +35,7 @@ antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Custom DXOS plugin.
 antigen bundle ~/.oh-my-zsh/custom/plugins/dxos
 
 antigen apply
@@ -82,6 +83,11 @@ export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 # https://github.com/nodenv/nodenv
 # NOTE: run `nodenv rehash` after installing global packages.
 eval "$(nodenv init -)"
+
+# NVM
+# https://github.com/nvm-sh/nvm
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # rbenv for Jekyll support.
 # https://jekyllrb.com/docs/installation/macos/#rbenv
