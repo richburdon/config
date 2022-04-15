@@ -27,6 +27,7 @@ MODULES=(
   nginx
   nodenv	      # https://github.com/nodenv/nodenv
   node-build
+# nvm           # https://github.com/nvm-sh/nvm
   openssl
   pnpm
   zsh           # https://ohmyz.sh

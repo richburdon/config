@@ -21,9 +21,13 @@ softwareupdate --install-rosetta --agree-to-license
 
 # curl -o- -L https://yarnpkg.com/install.sh | bash
 
+NODE_VERSION=16.14.2
+
+brew upgrade node-build
+
 npx @nodenv/nodenv-installer
-nodenv install 16.14.0
-nodenv global 16.14.0
+nodenv install $NODE_VERSION
+nodenv global $NODE_VERSION
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 nodenv init
 
@@ -33,5 +37,5 @@ npm install -g yarn
 # Rush
 #
 
+npm install -g pnpm
 npm install -g @microsoft/rush
-
