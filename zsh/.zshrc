@@ -77,7 +77,13 @@ export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 # Nodenv
 # https://github.com/nodenv/nodenv
 # NOTE: run `nodenv rehash` after installing global packages.
-eval "$(nodenv init -)"
+# eval "$(nodenv init -)"
+
+# NVM
+# https://github.com/nvm-sh/nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # rbenv for Jekyll support.
 # https://jekyllrb.com/docs/installation/macos/#rbenv
