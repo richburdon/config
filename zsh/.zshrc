@@ -49,7 +49,7 @@ ZSH_THEME="avit"
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 plugins=(
   encode64              # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/encode64
-  fzf                   # CTRL+T to find files; CTRL+R to search history
+# fzf                   # CTRL+T to find files; CTRL+R to search history
   git
   history               # Grep history: `h MATCH`
   macos                 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/osx (tab, cdf)
