@@ -37,11 +37,12 @@ nodenv init
 # arch -arm64 nodenv install 16.14.2
 # node -e "console.log(process.arch)"
 
+#
+# Build tools
+#
+
 npm install -g yarn
-
-#
-# Rush
-#
-
 npm install -g pnpm
 npm install -g @microsoft/rush
+
+reshash
