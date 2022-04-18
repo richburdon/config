@@ -24,23 +24,38 @@ softwareupdate --install-rosetta --agree-to-license
 NODE_VERSION=16.14.2
 
 # Required to see new versions of Node
-brew upgrade node-build
+brew upgrade nodenv node-build
 
-npx @nodenv/nodenv-installer
 nodenv install $NODE_VERSION
 nodenv global $NODE_VERSION
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 nodenv init
 
-# TODO(burdon): Upgrade to ARM once wrtc supported.
+#
+# ARM vs Intel.
+# Brew install binaries in difference locations based on the architecture.
 # arch -arm64 brew reinstall nodenv
 # arch -arm64 nodenv install 16.14.2
+#
+# .zsh/.zprofile
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+#
+# ARM: 
+#   /opt/homebrew/bin/brew
+#   /opt/homebrew/Cellar
+# Intel: 
+#   /usr/local/bin/brew
+#   /usr/local/Cellar/
+#
+# To determine the NodeJS architecture:
 # node -e "console.log(process.arch)"
+#
 
 #
 # Build tools
 #
 
+npm install -g corepack
 npm install -g yarn
 npm install -g pnpm
 npm install -g @microsoft/rush

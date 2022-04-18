@@ -11,7 +11,10 @@ source '/Users/burdon/.zsh/antigen.zsh'
 # ENV
 #
 
+# Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Ruby
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 
 # Git

@@ -1,2 +1,2 @@
-# AMD specific install.
-# eval "$(/opt/homebrew/bin/brew shellenv)"
+# ARM specific install.
+[[ $(arch) == "arm64" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
