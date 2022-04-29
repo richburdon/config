@@ -1987,7 +1987,7 @@
 				<key>Has Toolbelt</key>
 				<false/>
 				<key>Height</key>
-				<real>1415</real>
+				<real>1079</real>
 				<key>Hide After Opening</key>
 				<false/>
 				<key>Hiding Toolbelt Should Resize Window</key>
@@ -2273,6 +2273,8 @@
 											<key>Description</key>
 											<string>Default</string>
 											<key>Disable Window Resizing</key>
+											<true/>
+											<key>Draw Powerline Glyphs</key>
 											<true/>
 											<key>Flashing Bell</key>
 											<false/>
@@ -2867,7 +2869,7 @@
 											<string>/Users/burdon</string>
 										</dict>
 										<key>Columns</key>
-										<integer>126</integer>
+										<integer>171</integer>
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
@@ -2898,7 +2900,7 @@
 											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>62</integer>
+										<integer>46</integer>
 										<key>Session GUID</key>
 										<string>F71A5068-B2D9-4855-9741-7CED689D4A94</string>
 										<key>Short Lived Single Use</key>
@@ -2919,9 +2921,9 @@
 									<key>frame</key>
 									<dict>
 										<key>height</key>
-										<real>1370</real>
+										<real>1034</real>
 										<key>width</key>
-										<real>1272</real>
+										<real>1728</real>
 										<key>x</key>
 										<real>0.0</real>
 										<key>y</key>
@@ -2934,9 +2936,9 @@
 							<key>frame</key>
 							<dict>
 								<key>height</key>
-								<real>1370</real>
+								<real>1034</real>
 								<key>width</key>
-								<real>1272</real>
+								<real>1728</real>
 								<key>x</key>
 								<real>0.0</real>
 								<key>y</key>
@@ -2959,13 +2961,13 @@
 					<array>
 						<dict>
 							<key>heightAsFraction</key>
-							<real>0.4437367303609342</real>
+							<real>0.44382544103992572</real>
 							<key>name</key>
 							<string>Snippets</string>
 						</dict>
 						<dict>
 							<key>heightAsFraction</key>
-							<real>0.22292993630573249</real>
+							<real>0.22284122562674094</real>
 							<key>name</key>
 							<string>Command History</string>
 						</dict>
@@ -2980,11 +2982,11 @@
 				<key>Use Transparency</key>
 				<true/>
 				<key>Width</key>
-				<real>1272</real>
+				<real>1728</real>
 				<key>Window Type</key>
 				<integer>13</integer>
 				<key>X Origin</key>
-				<real>1288</real>
+				<real>0.0</real>
 				<key>Y Origin</key>
 				<real>0.0</real>
 			</dict>
