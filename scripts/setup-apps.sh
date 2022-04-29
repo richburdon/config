@@ -26,3 +26,4 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 pkill -f /Moom\.app/
 defaults import com.manytricks.Moom "$ROOT_DIR/config/moom/Moom.plist"
 open /Applications/Moom.app
+

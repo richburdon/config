@@ -60,4 +60,5 @@ npm install -g yarn
 npm install -g pnpm
 npm install -g @microsoft/rush
 
-reshash
+rehash
+
