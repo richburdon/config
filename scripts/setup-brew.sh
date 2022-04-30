@@ -29,12 +29,11 @@ MODULES=(
   node-build
 # nvm           # https://github.com/nvm-sh/nvm
   openssl
-  pnpm
   zsh           # https://ohmyz.sh
 )
 
 CASKS=(
-  ipfs
+# ipfs
   ngrok         # https://dashboard.ngrok.com/get-started/setup
 )
 
