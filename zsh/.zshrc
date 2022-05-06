@@ -82,6 +82,10 @@ export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 # Dev
 #
 
+# n
+# https://www.npmjs.com/package/n
+# sudo chown -R $USER "/usr/local/n"
+
 # Nodenv
 # https://github.com/nodenv/nodenv
 # NOTE: run `nodenv rehash` after installing global packages.
