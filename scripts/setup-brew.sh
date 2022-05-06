@@ -26,8 +26,9 @@ MODULES=(
   HTTPie        # https://formulae.brew.sh/formula/httpie
   jq
   nginx
-  nodenv	      # https://github.com/nodenv/nodenv
+# nodenv	      # https://github.com/nodenv/nodenv
   node-build
+  n             # https://www.npmjs.com/package/n
 # nvm           # https://github.com/nvm-sh/nvm
   openssl
   zsh           # https://ohmyz.sh

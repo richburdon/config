@@ -85,7 +85,7 @@ export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 # Nodenv
 # https://github.com/nodenv/nodenv
 # NOTE: run `nodenv rehash` after installing global packages.
-eval "$(nodenv init -)"
+# eval "$(nodenv init -)"
 
 # NVM
 # https://github.com/nvm-sh/nvm
