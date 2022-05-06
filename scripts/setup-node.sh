@@ -10,7 +10,7 @@ echo
 # NOTE: This will fail if `Open with Rosetta` is set in the iTerm config (Right-click Info).
 #
 
-softwareupdate --install-rosetta --agree-to-license
+# softwareupdate --install-rosetta --agree-to-license
 
 #
 # Nodenv
@@ -40,10 +40,10 @@ nodenv init
 # .zsh/.zprofile
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 #
-# ARM: 
+# ARM:
 #   /opt/homebrew/bin/brew
 #   /opt/homebrew/Cellar
-# Intel: 
+# Intel:
 #   /usr/local/bin/brew
 #   /usr/local/Cellar/
 #
@@ -55,10 +55,16 @@ nodenv init
 # Build tools
 #
 
-npm install -g corepack
-npm install -g yarn
-npm install -g pnpm
-npm install -g @microsoft/rush
+PACKAGES=(
+  corepack
+  yarn
+  pnpm
+  @microsoft/rush
+  sort-package-json
+)
 
-rehash
+for package in "${PACKAGES[@]}"; do
+  npm install -g --force $package
+done
 
+echo "Run rehash to update."
