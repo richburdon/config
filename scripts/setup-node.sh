@@ -48,4 +48,7 @@ for package in "${PACKAGES[@]}"; do
   npm install -g --force $package
 done
 
+npm -g list
+
 echo "Run rehash to update."
+

@@ -45,8 +45,11 @@ antigen apply
 
 # TODO(burdon): Theme issues with Warp.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="dxos"
-ZSH_THEME="avit"
+# TODO(burdon): https://docs.warp.dev/help/known-issues#list-of-incompatible-tools
+# ZSH_THEME="dxos"
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+  ZSH_THEME="avit"
+fi
 
 # TODO(burdon): Move to antigen.
 # https://github.com/robbyrussell/oh-my-zsh#plugins
