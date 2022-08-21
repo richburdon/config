@@ -11,6 +11,10 @@ source '/Users/burdon/.zsh/antigen.zsh'
 # ENV
 #
 
+# PNPM
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
