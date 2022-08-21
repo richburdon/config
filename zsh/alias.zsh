@@ -17,18 +17,25 @@ alias gpg-copy="_gpg_copy"
 alias gpg-keys="gpg --list-keys"
 alias gpg-search="gpg --keyserver=$KEY_SERVER --search-keys="
 
-# TODO(burdon): Move to x?
+# TODO(burdon): Move to x.
 alias loc="find . -type d -name "node_modules" -prune -o -type d -name ".git" -prune -o -type d -name ".idea" -prune -o -type d -name "dist" -prune -o -type f -print | wc"
+
+_find() {
+  find . -iregex ".*$1.*"
+}
+alias f="_find"
 
 _help() {
   open "https://www.mankier.com/1/$1"
 }
-
 alias help="_help"
 
 # Edit this file.
 alias zed="code ~/.zsh"
 alias up="exec zsh"
+
+# NX
+alias pnx='pnpm nx'
 
 # Rush
 alias ru="rush update"

@@ -25,6 +25,7 @@ MODULES=(
   keybase
   HTTPie        # https://formulae.brew.sh/formula/httpie
   jq
+  mosh          # https://mosh.org
   nginx
 # nodenv	      # https://github.com/nodenv/nodenv
   node-build

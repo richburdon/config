@@ -10,7 +10,12 @@ NODE_VERSION=16.14.0
 # brew upgrade n node-build
 
 # To fix n:
+# https://www.npmjs.com/package/n#installation
 # sudo chown -R $USER "/usr/local/n"
+
+n doctor
+
+n i $NODE_VERSION
 
 #
 # ARM vs Intel.
@@ -48,4 +53,7 @@ for package in "${PACKAGES[@]}"; do
   npm install -g --force $package
 done
 
+npm -g list
+
 echo "Run rehash to update."
+
