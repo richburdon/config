@@ -41,7 +41,7 @@ alias gc="git commit -a --allow-empty-message -m ''"
 # Update main then merge with this branch.
 alias gmm="git fetch && git merge origin/main"
 # Push branch for the first time.
-alias gpp="git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+alias gpp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 # TODO(burdon): Delete up-to-date branches?
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
