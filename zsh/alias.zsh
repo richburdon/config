@@ -32,20 +32,24 @@ alias help="_help"
 
 # Edit this file.
 alias zed="code ~/.zsh"
-alias up="exec zsh"
-
-# NX
-alias pnx='pnpm nx'
-
-# Rush
-alias ru="rush update"
-alias rb="rush build"
+alias up="rehash && exec zsh"
 
 # Git
+alias gb="git branch -vv"
 alias gs="git-branch-select -l"
 alias gc="git commit -a --allow-empty-message -m ''"
+# Update main then merge with this branch.
 alias gmm="git fetch && git merge origin/main"
+# Push branch for the first time.
+alias gpp="git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+# TODO(burdon): Delete up-to-date branches?
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 # https://github.com/nosarthur/gita
 alias gita="python3 -m gita"
+
+# NX
+alias pnx='pnpm nx'
+
+# Tools
+alias ws="webstorm"
