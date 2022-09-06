@@ -116,3 +116,15 @@ export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 
 source "$ZDOTDIR/alias.zsh"
 source "$ZDOTDIR/chrome.zsh"
+
+# pnpm
+export PNPM_HOME="/Users/burdon/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# bun completions
+[ -s "/Users/burdon/.bun/_bun" ] && source "/Users/burdon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

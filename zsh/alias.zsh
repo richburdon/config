@@ -43,8 +43,8 @@ alias rb="rush build"
 
 # Git
 alias gs="git-branch-select -l"
-alias gc="git commit -a --allow-empty-message -m ''"
-alias gmm="git fetch && git merge origin/main"
+alias gc="git commit -a --allow-empty-message -m 'nop'"
+alias gmm="git fetch --all && git fetch origin main:main && git merge main"
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 # https://github.com/nosarthur/gita
