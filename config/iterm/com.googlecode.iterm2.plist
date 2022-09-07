@@ -2060,6 +2060,16 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>guid</key>
+			<string>9B8462AE-8706-4EF5-B4CC-13734971AC3C</string>
+			<key>title</key>
+			<string>Search reflogs</string>
+			<key>value</key>
+			<string>for commit in $(git reflog|cut -d' ' -f1|sort|uniq); do echo $commit; git show $commit:$1 &amp;&gt;/dev/null | grep "$2"; done</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>SoundForEsc</key>
 	<false/>
