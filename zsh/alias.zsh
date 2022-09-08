@@ -49,11 +49,24 @@ alias gpp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 # Search git reflog for string in specific file modified in commit.
-# git checkout $HASH -- $PATH
+# Examples:
+# greplog "foo"
+# greplog "foo" ./README.md
+#
+# git show 9d343f8e                       // Show all changes.
+# git show 9d343f8e:                      // Show files in ref.
+# git checkout $HASH -- $PATH             // Checkout file from ref
 function greplog() {
+  obj=""
+  if [ -n "$2" ]; then
+    obj=":$2"
+  fi
   for commit in $(git reflog|cut -d' ' -f1|sort|uniq); 
   do 
-    git show $commit:$1 &>/dev/null | grep "$2" | while read line; do echo "$commit $line"; done; 
+    # echo "[$commit$obj]"
+    # TODO(burdon): Show matching file (and line?)
+    git show "$commit$obj" &>/dev/null | grep -i "$1" | \
+      while read line; do echo "$commit $line"; done; 
   done
 }
 
