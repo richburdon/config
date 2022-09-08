@@ -48,7 +48,7 @@ alias gpp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 # TODO(burdon): Delete up-to-date branches?
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
-# Search git reflog for string in specific file modified in commit.
+# Search the local git reflog for string in specific file modified in commit.
 # Examples:
 # greplog "foo"
 # greplog "foo" ./README.md
