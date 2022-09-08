@@ -48,6 +48,7 @@ alias gpp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 # TODO(burdon): Delete up-to-date branches?
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
+#
 # Search the local git reflog for string in specific file modified in commit.
 # Examples:
 # greplog "foo"
@@ -55,7 +56,10 @@ alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/f
 #
 # git show 9d343f8e                       // Show all changes.
 # git show 9d343f8e:                      // Show files in ref.
-# git checkout $HASH -- $PATH             // Checkout file from ref
+#
+# git checkout $HASH -- $PATH             // Checkout file from ref.
+# git checkout $HASH~1 -- $PATH           // Checkout (deleted) file from previous ref.
+#
 function greplog() {
   obj=""
   if [ -n "$2" ]; then
