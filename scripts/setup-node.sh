@@ -15,7 +15,7 @@ NODE_VERSION=16.14.0
 
 n doctor
 
-n i $NODE_VERSION
+sudo n i $NODE_VERSION
 
 #
 # ARM vs Intel.
@@ -47,6 +47,8 @@ PACKAGES=(
   pnpm
   @microsoft/rush
   sort-package-json
+  git-branch-select
+  monorepo-cd
 )
 
 for package in "${PACKAGES[@]}"; do
