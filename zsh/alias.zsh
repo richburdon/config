@@ -30,6 +30,7 @@ function help() {
 }
 
 # Edit this file.
+# alias zed="code --wait ~/.zsh ~/.zsh/alias.zsh && rehash && exec zsh"
 alias zed="code ~/.zsh"
 alias up="rehash && exec zsh"
 
@@ -40,7 +41,7 @@ alias gs="git-branch-select -l"
 alias gc="git commit -a --allow-empty-message -m ''"
 
 # Update main then merge with this branch.
-alias gmm="git fetch && git merge origin/main"
+alias gmm="git fetch && git fetch origin main:main && git merge main"
 
 # Push branch for the first time.
 alias gpp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
@@ -81,19 +82,24 @@ alias gita="python3 -m gita"
 eval "$(monorepo-cd --init m)"
 
 # NX
-alias pnx='pnpm nx'
+# pnpm nx run-many --target=build
+# pnpm nx build <target> --watch
+alias px="pnpm -w nx"
 
-function px() {
-  (m / && pnpm nx $@)
+# p build
+function p () {
+  px $1 "${PWD##*/}"
 }
 
-function pxb() {
-  px build "${PWD##*/}"
-}
+# Clean and build.
+alias fak="git pull && git clean -xdf && pnpm i && px run-many --target build"
+alias ci="px run-many --target build && px run-many --target test && px run-many --target lint"
 
-function pxt() {
-  px test "${PWD##*/}"
-}
+# TODO: Implement with x
+# x build
+# x test
+# x - client-serv (complete)
+# beast client (draw graph)
 
 # Tools
 alias ws="webstorm"
