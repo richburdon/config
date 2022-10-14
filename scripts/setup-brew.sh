@@ -22,6 +22,7 @@ MODULES=(
   git
   go
   fzf           # https://github.com/junegunn/fzf/tree/c60ed1758315f0d993fbcbf04459944c87e19a48#installation
+  jq
   htop
   keybase
   HTTPie        # https://formulae.brew.sh/formula/httpie

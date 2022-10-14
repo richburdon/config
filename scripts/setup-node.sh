@@ -12,18 +12,15 @@ ln -s $CONFIG/.npmrc $HOME/.npmrc
 # https://docs.npmjs.com/cli/v7/commands/npm-config
 # https://www.npmjs.com/package/n#installation
 
-sudo mkdir -p /usr/local/n
-sudo chown -R $(whoami) /usr/local/n
-
 #
 # Build tools
+# To remove all globally installed packages: `rm -rf /usr/local/lib/node_modules`
 #
 
 PACKAGES=(
   @microsoft/rush
   corepack
   git-branch-select
-  jq
   monorepo-cd
   n
   pnpm@7.9.0

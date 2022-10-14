@@ -15,44 +15,11 @@
 # .zlogout (when the shell exits)
 #
 
-source '/Users/burdon/.zsh/antigen.zsh'
-
-#
-# ENV 
-# TODO: Move to .zshenv
-#
-
-# Git
-export DXOS_ROOT="$HOME/Code/dxos"
-
-# GPG
-export KEY_SERVER="hkp://pool.sks-keyservers.net"
-
-# iTerm2
-export DISABLE_AUTO_TITLE="true"
-export HISTSIZE=10000
-setopt EXTENDED_HISTORY
-
-#
-# Brew
-# https://brew.sh
-#
-
-#
-# PATH
-#
-
-# Ruby
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-
-# PNPM
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-export HOMEBREW_NO_ANALYTICS=1
-
 #
 # Oh My Zsh
 #
+
+source '/Users/burdon/.zsh/antigen.zsh'
 
 antigen use oh-my-zsh
 
@@ -109,40 +76,14 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 
 #
-# Dev
-#
-
-# n
-# https://www.npmjs.com/package/n
-# sudo chown -R $USER "/usr/local/n"
-
-# Nodenv
-# https://github.com/nodenv/nodenv
-# NOTE: run `nodenv rehash` after installing global packages.
-# eval "$(nodenv init -)"
-
-# NVM
-# https://github.com/nvm-sh/nvm
-# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# rbenv for Jekyll support.
-# https://jekyllrb.com/docs/installation/macos/#rbenv
-# eval "$(rbenv init - zsh)"
-
-# Rust
-# https://www.rust-lang.org/tools/install
-# source "$HOME/.cargo/env"
-
-# Go
-# https://go.dev/doc/install
-
-#
 # Custom
 #
 
 source "$ZDOTDIR/alias.zsh"
 source "$ZDOTDIR/chrome.zsh"
+
+# ruby
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="/Users/burdon/Library/pnpm"

@@ -8,6 +8,9 @@ ln -s $CONFIG_HOME $HOME/.config-repo
 sudo mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
 sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
 
+sudo mkdir -p /usr/local/n
+sudo chown -R $(whoami) /usr/local/n
+
 source ./scripts/setup-zsh.sh
 source ./scripts/setup-brew.sh
 source ./scripts/setup-node.sh
