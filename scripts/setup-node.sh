@@ -42,13 +42,15 @@ sudo n i $NODE_VERSION
 #
 
 PACKAGES=(
-  corepack
-  yarn
-  pnpm
   @microsoft/rush
-  sort-package-json
+  corepack
   git-branch-select
+  jq
   monorepo-cd
+  n
+  pnpm@7.9.0
+  sort-package-json
+  yarn
 )
 
 for package in "${PACKAGES[@]}"; do

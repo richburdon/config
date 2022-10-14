@@ -61,7 +61,7 @@ alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/f
 # git checkout $HASH -- $PATH             // Checkout file from ref.
 # git checkout $HASH~1 -- $PATH           // Checkout (deleted) file from previous ref.
 #
-function greplog() {
+function grep-log() {
   obj=""
   if [ -n "$2" ]; then
     obj=":$2"
@@ -75,6 +75,14 @@ function greplog() {
   done
 }
 
+# show files that match pattern.
+function grep-files() {
+  MATCH=$1
+  ROOT=$2
+  EXT=$3
+  grep -l -R --include \*.${EXT:=ts} "$MATCH" ${ROOT:=./packages}
+}
+
 # https://github.com/nosarthur/gita
 alias gita="python3 -m gita"
 
@@ -86,9 +94,14 @@ eval "$(monorepo-cd --init m)"
 # pnpm nx build <target> --watch
 alias px="pnpm -w nx"
 
-# p build
+# e.g., p build
 function p () {
-  px $1 "${PWD##*/}"
+  px $1 "${PWD##*/}" "$@"
+}
+
+# Break NX cache.
+function pc () {
+  p "$@" "${RANDOM}"
 }
 
 # Clean and build.

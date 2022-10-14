@@ -15,9 +15,6 @@ source '/Users/burdon/.zsh/antigen.zsh'
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-# Yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 
@@ -73,6 +70,18 @@ export ZSH_CACHE_DIR=~/.zcompdump
 export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
+
+#
+# iTerm
+#
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#
+# Brew
+#
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #
 # Zsh Extensions

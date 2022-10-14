@@ -17,6 +17,7 @@ fi
 
 MODULES=(
   coreutils
+  deno          # https://deno.land/manual@v1.26.0/getting_started/installation
   gh
   git
   go
@@ -24,13 +25,8 @@ MODULES=(
   htop
   keybase
   HTTPie        # https://formulae.brew.sh/formula/httpie
-  jq
   mosh          # https://mosh.org
   nginx
-# nodenv	      # https://github.com/nodenv/nodenv
-  node-build
-  n             # https://www.npmjs.com/package/n
-# nvm           # https://github.com/nvm-sh/nvm
   openssl
   zsh           # https://ohmyz.sh
 )

@@ -1,2 +1,2 @@
-# ARM specific install.
-[[ $(arch) == "arm64" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+# Added by Toolbox App
+export PATH="$PATH:/Users/burdon/Library/Application Support/JetBrains/Toolbox/scripts"
