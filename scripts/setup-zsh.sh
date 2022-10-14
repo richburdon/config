@@ -4,15 +4,13 @@ echo
 echo "### ZSH ###"
 echo
 
-cd $HOME
+CONFIG=$HOME/.config-repo
 
 #
 # Zsh
 # Create symlinks
 # Many tools want to append to these files.
 #
-
-CONFIG=$HOME/Code/richburdon/config
 
 FILES=(
   .zprofile
@@ -26,7 +24,7 @@ ln -s $CONFIG/zsh $HOME/.zsh
 for file in "${FILES[@]}"; do
   echo "Linking $file"
   rm -rf $HOME/$file
-  ln -s $HOME/.zsh/$file
+  ln -s $HOME/.zsh/$file $HOME/$file
 done
 
 exit

@@ -31,7 +31,7 @@ function help() {
 
 # Edit this file.
 # alias zed="code --wait ~/.zsh ~/.zsh/alias.zsh && rehash && exec zsh"
-alias zed="code ~/.zsh"
+alias zed="code ~/.config-repo"
 alias up="rehash && exec zsh"
 
 # Git

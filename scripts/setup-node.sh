@@ -4,38 +4,16 @@ echo
 echo "### NodeJS ###"
 echo
 
-NODE_VERSION=16.14.0
+CONFIG=$HOME/.config-repo
 
-# Required to see new versions of Node
-# brew upgrade n node-build
+rm -rf $HOME/.npmrc
+ln -s $CONFIG/.npmrc $HOME/.npmrc
 
-# To fix n:
+# https://docs.npmjs.com/cli/v7/commands/npm-config
 # https://www.npmjs.com/package/n#installation
-# sudo chown -R $USER "/usr/local/n"
 
-n doctor
-
-sudo n i $NODE_VERSION
-
-#
-# ARM vs Intel.
-# Brew install binaries in difference locations based on the architecture.
-# arch -arm64 brew reinstall nodenv
-# arch -arm64 nodenv install 16.14.2
-#
-# .zsh/.zprofile
-# eval "$(/opt/homebrew/bin/brew shellenv)"
-#
-# ARM:
-#   /opt/homebrew/bin/brew
-#   /opt/homebrew/Cellar
-# Intel:
-#   /usr/local/bin/brew
-#   /usr/local/Cellar/
-#
-# To determine the NodeJS architecture:
-# node -e "console.log(process.arch)"
-#
+sudo mkdir -p /usr/local/n
+sudo chown -R $(whoami) /usr/local/n
 
 #
 # Build tools
@@ -59,5 +37,8 @@ done
 
 npm -g list
 
-echo "Run rehash to update."
+n doctor
+NODE_VERSION=16.14.0
+sudo n i $NODE_VERSION
 
+echo "Run rehash to update."

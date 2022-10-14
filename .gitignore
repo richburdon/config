@@ -9,10 +9,11 @@
 
 # NodeJS
 node_modules/
+yarn.lock
 
 # General
 .DS_Store/
-tmp/
 .iterm/
 .iterm*/
+tmp/
 

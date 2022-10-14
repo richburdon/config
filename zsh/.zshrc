@@ -7,13 +7,12 @@
 
 source '/Users/burdon/.zsh/antigen.zsh'
 
+# PNPM
+export PNPM_HOME="$HOME/Library/pnpm"
+
 #
 # ENV
 #
-
-# PNPM
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
@@ -26,9 +25,23 @@ export KEY_SERVER="hkp://pool.sks-keyservers.net"
 
 # iTerm2
 export DISABLE_AUTO_TITLE="true"
-
 export HISTSIZE=10000
 setopt EXTENDED_HISTORY
+
+#
+# Brew
+# https://brew.sh
+#
+
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export HOMEBREW_NO_ANALYTICS=1
+
+#
+# PATH
+#
+
+export PATH="$PNPM_HOME:$PATH"
 
 #
 # Oh My Zsh
@@ -76,12 +89,6 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 #
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-#
-# Brew
-#
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #
 # Zsh Extensions

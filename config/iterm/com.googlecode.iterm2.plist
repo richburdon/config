@@ -2141,7 +2141,7 @@
 				<key>Saved Window Type</key>
 				<integer>13</integer>
 				<key>Screen</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Scroller Width</key>
 				<real>0.0</real>
 				<key>Selected Tab Index</key>
@@ -3015,16 +3015,35 @@
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
-										<array/>
+										<array>
+											<string>/Users/burdon</string>
+											<string>/Users/burdon</string>
+										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
 											<string>/Users/burdon</string>
 										</dict>
 										<key>Hostname to Shell</key>
-										<dict/>
+										<dict>
+											<key>burdon@burdon-studio-2063.local</key>
+											<string>zsh</string>
+										</dict>
 										<key>Hosts</key>
-										<array/>
+										<array>
+											<dict>
+												<key>Host name</key>
+												<string>burdon-studio-2063.local</string>
+												<key>User name</key>
+												<string>burdon</string>
+											</dict>
+											<dict>
+												<key>Host name</key>
+												<string>burdon-studio-2063.local</string>
+												<key>User name</key>
+												<string>burdon</string>
+											</dict>
+										</array>
 										<key>Is UTF-8</key>
 										<true/>
 										<key>Key Labels</key>
@@ -3050,7 +3069,7 @@
 										<key>Should Expect Current Dir Updates</key>
 										<false/>
 										<key>Should Expect Prompt Marks</key>
-										<false/>
+										<true/>
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
@@ -3128,7 +3147,7 @@
 				<key>Window Type</key>
 				<integer>13</integer>
 				<key>X Origin</key>
-				<real>0.0</real>
+				<real>-1272</real>
 				<key>Y Origin</key>
 				<real>0.0</real>
 			</dict>
