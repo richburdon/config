@@ -1,6 +1,6 @@
 # ZSH
-.zsh_history
 .zcompdump-*
+.zsh_history
 .zsh_sessions
 .zshrc.zwc
 
@@ -11,7 +11,6 @@
 node_modules/
 
 # General
+.DS_Store/
 tmp/
-.DS_Store
-
 
