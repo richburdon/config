@@ -5,17 +5,22 @@
 # To reset: `exec zsh`
 #
 
+#
+# https://apple.stackexchange.com/questions/388622/zsh-zprofile-zshrc-zlogin-what-goes-where
+#
+# .zshenv (environment variables: read first)
+# .zprofile (login shell)
+# .zshrc (interactive shell: read after .zprofile)
+# .zlogin (login shell)
+# .zlogout (when the shell exits)
+#
+
 source '/Users/burdon/.zsh/antigen.zsh'
 
-# PNPM
-export PNPM_HOME="$HOME/Library/pnpm"
-
 #
-# ENV
+# ENV 
+# TODO: Move to .zshenv
 #
-
-# Ruby
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 
 # Git
 export DXOS_ROOT="$HOME/Code/dxos"
@@ -33,15 +38,17 @@ setopt EXTENDED_HISTORY
 # https://brew.sh
 #
 
-# eval "$(/opt/homebrew/bin/brew shellenv)"
-
-export HOMEBREW_NO_ANALYTICS=1
-
 #
 # PATH
 #
 
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+
+# PNPM
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export HOMEBREW_NO_ANALYTICS=1
 
 #
 # Oh My Zsh
