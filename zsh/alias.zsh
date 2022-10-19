@@ -94,14 +94,14 @@ eval "$(monorepo-cd --init m)"
 # pnpm nx build <target> --watch
 alias px="pnpm -w nx"
 
-# e.g., p build
+# e.g., p build => pnpm -w nx build <current_directory>
 function p () {
   px $1 "${PWD##*/}" "$@"
 }
 
 # Break NX cache.
 function pc () {
-  p "$@" "${RANDOM}"
+  px $1 "${PWD##*/}" "$@" "${RANDOM}"
 }
 
 # Clean and build.
