@@ -99,6 +99,11 @@ function p () {
   px $1 "${PWD##*/}" "$@"
 }
 
+# Run everything.
+function pa () {
+  pnpm nx run-many --target=$1
+}
+
 # Break NX cache.
 function pc () {
   px $1 "${PWD##*/}" "$@" "${RANDOM}"
