@@ -4,7 +4,16 @@ echo
 echo "### ZSH ###"
 echo
 
-CONFIG=$HOME/.config-repo
+CONFIG_HOME=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
+
+rm -rf $HOME/.config-repo 
+ln -s $CONFIG_HOME $HOME/.config-repo
+
+sudo mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+
+sudo mkdir -p /usr/local/n
+sudo chown -R $(whoami) /usr/local/n
 
 #
 # Zsh
@@ -19,7 +28,7 @@ FILES=(
 )
 
 rm -f $HOME/.zsh
-ln -s $CONFIG/zsh $HOME/.zsh
+ln -s $CONFIG_HOME/zsh $HOME/.zsh
 
 for file in "${FILES[@]}"; do
   echo "Linking $file"
@@ -27,7 +36,9 @@ for file in "${FILES[@]}"; do
   ln -s $HOME/.zsh/$file $HOME/$file
 done
 
-exit
+# Check if already installed.
+which zsh && exit
+echo "Installing zsh..."
 
 #
 # Oh My Zsh
