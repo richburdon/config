@@ -1,9 +1,10 @@
 #
 # Aliases
-#
+# 
 
-alias l="ls -og"
-alias ll="ls -aog"
+alias ls="gls --color=tty"
+alias l="ls -l -og --time-style=long-iso"
+alias ll="ls -la -og --time-style=long-iso"
 
 alias home="cd $DXOS_ROOT"
 
