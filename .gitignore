@@ -10,6 +10,8 @@ tmp
 .zsh_sessions
 .zshrc.zwc
 
+ohmyzsh/
+
 # Webstorm
 .idea/workspace.xml
 
