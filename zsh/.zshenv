@@ -1,7 +1,20 @@
 #
-# $ZDOTDIR/.zshenv
-# First to be sourced.
-# https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+# This is read first.
 #
 
-ZDOTDIR="${ZDOTDIR:-$HOME/.zsh}"
+# Root for .zsh
+export ZDOTDIR="${ZDOTDIR:-$HOME/.zsh}"
+
+# Brew
+export HOMEBREW_NO_ANALYTICS=1
+
+# GPG
+export KEY_SERVER="hkp://pool.sks-keyservers.net"
+
+# iTerm2
+export DISABLE_AUTO_TITLE="true"
+export HISTSIZE=10000
+setopt EXTENDED_HISTORY
+
+# DXOS
+export DXOS_ROOT="$HOME/Code/dxos"

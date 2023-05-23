@@ -5,49 +5,46 @@
 # To reset: `exec zsh`
 #
 
-source '/Users/burdon/.zsh/antigen.zsh'
-
 #
-# ENV
+# https://apple.stackexchange.com/questions/388622/zsh-zprofile-zshrc-zlogin-what-goes-where
 #
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-
-# Git
-export DXOS_ROOT="$HOME/Code/dxos"
-
-# GPG
-export KEY_SERVER="hkp://pool.sks-keyservers.net"
-
-# iTerm2
-export DISABLE_AUTO_TITLE="true"
-
-export HISTSIZE=10000
-setopt EXTENDED_HISTORY
+# .zshenv (environment variables: read first)
+# .zprofile (login shell)
+# .zshrc (interactive shell: read after .zprofile)
+# .zlogin (login shell)
+# .zlogout (when the shell exits)
+#
 
 #
 # Oh My Zsh
 #
 
+source '/Users/burdon/.zsh/antigen.zsh'
+
+antigen use oh-my-zsh
+
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Custom DXOS plugin.
+antigen bundle ~/.oh-my-zsh/custom/plugins/dxos
+
+antigen apply
+
 # TODO(burdon): Theme issues with Warp.
-#antigen use oh-my-zsh
-
-#antigen bundle zsh-users/zsh-autosuggestions
-#antigen bundle zsh-users/zsh-syntax-highlighting
-
-#antigen apply
-
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="dxos"
-ZSH_THEME="avit"
+# TODO(burdon): https://docs.warp.dev/help/known-issues#list-of-incompatible-tools
+# ZSH_THEME="dxos"
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+  ZSH_THEME="avit"
+fi
 
+# TODO(burdon): Move to antigen.
 # https://github.com/robbyrussell/oh-my-zsh#plugins
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 plugins=(
-  dxos
   encode64              # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/encode64
-  fzf                   # CTRL+T to find files; CTRL+R to search history
+# fzf                   # CTRL+T to find files; CTRL+R to search history
   git
   history               # Grep history: `h MATCH`
   macos                 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/osx (tab, cdf)
@@ -62,6 +59,12 @@ export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
 #
+# iTerm
+#
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#
 # Zsh Extensions
 #
 
@@ -73,28 +76,24 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 export FZF_DEFAULT_OPTS='--query "!node_modules !dist "'
 
 #
-# Dev
-#
-
-# Nodenv
-# https://github.com/nodenv/nodenv
-# NOTE: run `nodenv rehash` after installing global packages.
-eval "$(nodenv init -)"
-
-# rbenv for Jekyll support.
-# https://jekyllrb.com/docs/installation/macos/#rbenv
-# eval "$(rbenv init - zsh)"
-
-# Rust
-# https://www.rust-lang.org/tools/install
-# source "$HOME/.cargo/env"
-
-# Go
-# https://go.dev/doc/install
-
-#
 # Custom
 #
 
 source "$ZDOTDIR/alias.zsh"
 source "$ZDOTDIR/chrome.zsh"
+
+# ruby
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/burdon/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# bun completions
+[ -s "/Users/burdon/.bun/_bun" ] && source "/Users/burdon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+test -e /Users/burdon/.zsh/.iterm2_shell_integration.zsh && source /Users/burdon/.zsh/.iterm2_shell_integration.zsh || true

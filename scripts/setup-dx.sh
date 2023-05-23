@@ -1,4 +1,8 @@
 #!/bin/sh
 
-yarn global remove @dxos/cli
-yarn global add @dxos/cli
+echo
+echo "### X ###"
+echo
+
+yarn global remove @dxos/x
+yarn global add @dxos/x

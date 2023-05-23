@@ -1,0 +1,95 @@
+menuabar:
+  - name: "Moom"
+    type: Menubar
+    install: https://apps.apple.com/us/app/moom/id419330170?mt=12
+    config: ./config/moom
+  - name: "The Clock"
+    type: Menubar
+    install: https://apps.apple.com/us/app/the-clock/id488764545?mt=12
+    config: ./config/the-clock
+  - name: "Menubar Stats"
+    type: Menubar
+    install: https://apps.apple.com/us/app/menubar-stats/id714196447?mt=12
+    config: ./config/menubar-stats
+  - name: "Hidden Bar"
+    type: Menbar
+    install: https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12
+  - name: "Hide Icons"
+    type: Menbar
+    install: https://apps.apple.com/us/app/hide-icons/id1565144057?mt=12
+
+system:
+  - name: "1Password"
+    type: System
+    install: App Store
+    notes: "Get QR code from other machine."
+  - name: "Keybase"
+    type: System
+    install: https://keybase.io/download
+    notes: "Activate from other machine."
+  - name: "Dropbox"
+    type: System
+    install: https://dropbox.com
+  - name: "ExpressVPN"
+    type: System
+
+dev:
+  - name: "Brew"
+    type: Dev
+    install: https://brew.sh
+  - name: "Xcode"
+    type: Dev
+    install: https://apps.apple.com/us/app/xcode/id497799835?mt=12
+  - name: "iTerm"
+    type: Dev
+    config: ./config/iterm
+  - name: "VScode"
+    type: Dev
+  - name: "Jetbrains Toolkit"
+    type: Dev
+    notes: "Import Webstorm from here"
+  - name: "GitKraken"
+    type: Dev
+  - name: "Warp"
+    type: Dev
+
+comms:
+  - name: "Signal"
+    type: Comms
+  - name: "Discord"
+    type: Comms
+  - name: "Zoom"
+    type: Comms
+  - name: "Skype"
+    type: Comms
+  - name: "WhatsApp"
+    type: Comms
+    install: https://apps.apple.com/us/app/whatsapp-desktop/id1147396723?mt=12
+  - name: "Telegram"
+    type: Comms
+    install: https://apps.apple.com/us/app/telegram/id747648890?mt=12
+
+app:
+  - name: "Google Chrome"
+    type: App
+  - name: "Microsoft Office"
+    type: App
+    notes: "DO NOT INSTALL FROM APP STORE"
+    install: "https://account.microsoft.com/services"
+  - name: "Affinity Designer"
+    type: App
+    install: https://apps.apple.com/us/app/affinity-designer/id824171161?mt=12
+  - name: "Affinity Photo"
+    type: App
+    install: https://apps.apple.com/us/app/affinity-photo/id824183456?mt=12
+  - name: "Affinity Publisher"
+    type: App
+    install: https://apps.apple.com/us/app/affinity-publisher/id881418622?mt=12
+  - name: "Notion"
+    type: App
+    install: https://www.notionwizard.com/download-notion
+  - name: "Sketch-up"
+    type: App
+    install: https://help.sketchup.com/en/downloading-sketchup
+  - name: "Figma"
+    type: App

@@ -1,24 +1,41 @@
 #!/bin/sh
 
-#
-# Nodenv
-# Clean-up previous versions of node and yarn:
-# https://github.com/nodenv/nodenv#homebrew-on-macos
-# brew uninstall --ignore-dependencies node
-#
+echo
+echo "### NodeJS ###"
+echo
 
-# curl -o- -L https://yarnpkg.com/install.sh | bash
+CONFIG=$HOME/.config-repo
 
-npx @nodenv/nodenv-installer
-nodenv install 15.14.0
-nodenv global 15.14.0
-curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
-nodenv init
+rm -rf $HOME/.npmrc
+ln -s $CONFIG/.npmrc $HOME/.npmrc
 
-npm install -g yarn
+# https://docs.npmjs.com/cli/v7/commands/npm-config
+# https://www.npmjs.com/package/n#installation
 
 #
-# Rush
+# Build tools
+# To remove all globally installed packages: `rm -rf /usr/local/lib/node_modules`
 #
 
-npm install -g @microsoft/rush
+PACKAGES=(
+  @microsoft/rush
+  corepack
+  git-branch-select
+  monorepo-cd
+  n
+  pnpm@7.9.0
+  sort-package-json
+  yarn
+)
+
+for package in "${PACKAGES[@]}"; do
+  npm install -g --force $package
+done
+
+npm -g list
+
+n doctor
+NODE_VERSION=16.14.0
+sudo n i $NODE_VERSION
+
+echo "Run rehash to update."
