@@ -97,3 +97,7 @@ export PATH="$PNPM_HOME:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 test -e /Users/burdon/.zsh/.iterm2_shell_integration.zsh && source /Users/burdon/.zsh/.iterm2_shell_integration.zsh || true
+
+# go
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"

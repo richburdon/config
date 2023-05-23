@@ -36,10 +36,6 @@ for file in "${FILES[@]}"; do
   ln -s $HOME/.zsh/$file $HOME/$file
 done
 
-# Check if already installed.
-which zsh && exit
-echo "Installing zsh..."
-
 #
 # Oh My Zsh
 # https://github.com/ohmyzsh/ohmyzsh/tree/93cc3964e2d265ab0571298d69d2eed0a65d13f2

@@ -18,7 +18,6 @@ ln -s $CONFIG/.npmrc $HOME/.npmrc
 #
 
 PACKAGES=(
-  @microsoft/rush
   corepack
   git-branch-select
   monorepo-cd
@@ -35,7 +34,7 @@ done
 npm -g list
 
 n doctor
-NODE_VERSION=16.14.0
+NODE_VERSION=16.13.0
 sudo n i $NODE_VERSION
 
 echo "Run rehash to update."
