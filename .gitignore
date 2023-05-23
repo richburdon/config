@@ -11,6 +11,8 @@ tmp
 .zshrc.zwc
 .zshrc.pre*
 
+ohmyzsh/
+
 # Webstorm
 .idea/workspace.xml
 

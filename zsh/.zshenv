@@ -23,4 +23,4 @@ export EDITOR=code
 export DXOS_ROOT="$HOME/Code/dxos/dxos"
 
 # DXOS Sentry logging
-export DX_ENVIRONMENT="burdon-studio-2022"
+export DX_ENVIRONMENT=${$(hostname)%.*}
