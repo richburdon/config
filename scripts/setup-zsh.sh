@@ -6,7 +6,7 @@ echo
 
 CONFIG_HOME=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
 
-rm -rf $HOME/.config-repo 
+rm -rf $HOME/.config-repo
 ln -s $CONFIG_HOME $HOME/.config-repo
 
 sudo mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
@@ -42,7 +42,8 @@ done
 #
 
 # Install.
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # https://github.com/zsh-users/zsh-autosuggestions/blob/ae315ded4dba10685dbbafbfa2ff3c1aefeb490d/INSTALL.md#oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
