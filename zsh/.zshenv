@@ -16,5 +16,11 @@ export DISABLE_AUTO_TITLE="true"
 export HISTSIZE=10000
 setopt EXTENDED_HISTORY
 
+# EDITOR
+export EDITOR=code
+
 # DXOS
-export DXOS_ROOT="$HOME/Code/dxos"
+export DXOS_ROOT="$HOME/Code/dxos/dxos"
+
+# DXOS Sentry logging
+export DX_ENVIRONMENT="burdon-studio-2022"
