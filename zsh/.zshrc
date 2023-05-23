@@ -31,12 +31,12 @@ setopt EXTENDED_HISTORY
 #
 
 # TODO(burdon): Theme issues with Warp.
-antigen use oh-my-zsh
+#antigen use oh-my-zsh
 
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
+#antigen bundle zsh-users/zsh-autosuggestions
+#antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen apply
+#antigen apply
 
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="dxos"
