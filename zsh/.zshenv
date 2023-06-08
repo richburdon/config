@@ -18,3 +18,4 @@ setopt EXTENDED_HISTORY
 
 # DXOS
 export DXOS_ROOT="$HOME/Code/dxos"
+. "$HOME/.cargo/env"

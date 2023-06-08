@@ -40,9 +40,10 @@ alias gb="git branch -vv"
 alias gs="git-branch-select -l"
 
 alias gc="git commit -a --allow-empty-message -m ''"
+# alias gc="git commit -a --amend --allow-empty-message -m ''"
 
 # Update main then merge with this branch.
-alias gmm="git fetch && git fetch origin main:main && git merge main"
+alias gmm="git fetch && git merge --no-ff --no-edit origin/main"
 
 # Push branch for the first time.
 alias gpp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
@@ -88,31 +89,33 @@ function grep-files() {
 alias gita="python3 -m gita"
 
 # https://github.com/dmaretskyi/monorepo-cd
-eval "$(monorepo-cd --init m)"
+# eval "$(monorepo-cd --init m)"
 
 # NX
 # pnpm nx run-many --target=build
 # pnpm nx build <target> --watch
-alias px="pnpm -w nx"
+# alias px="pnpm -w nx"
 
 # e.g., p build => pnpm -w nx build <current_directory>
-function p () {
-  px $1 "${PWD##*/}" "$@"
-}
+# function p () {
+  # px $1 "${PWD##*/}" "$@"
+# }
 
 # Run everything.
-function pa () {
-  pnpm nx run-many --target=$1
-}
+# function pa () {
+  # pushd $(git rev-parse --show-toplevel)
+  # pnpm nx run-many --target=$1
+  # popd
+# }
 
 # Break NX cache.
-function pc () {
-  px $1 "${PWD##*/}" "$@" "${RANDOM}"
-}
+# function pc () {
+  # px $1 "${PWD##*/}" "$@" "${RANDOM}"
+# }
 
 # Clean and build.
-alias fak="git pull && git clean -xdf && pnpm i && px run-many --target build"
-alias ci="px run-many --target build && px run-many --target test && px run-many --target lint"
+# alias fak="git pull && git clean -xdf && pnpm i && px run-many --target build"
+# alias ci="px run-many --target build && px run-many --target test && px run-many --target lint"
 
 # TODO: Implement with x
 # x build

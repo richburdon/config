@@ -371,7 +371,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>25</real>
+			<real>20.489328457446803</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -386,7 +386,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>80</integer>
+			<integer>120</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -1276,7 +1276,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Advanced</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -1305,7 +1305,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>ssh spok.local</string>
+			<string>doctl compute ssh bots.kube.dxos.org</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1612,13 +1612,13 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>KUBE (spok.local)</string>
+			<string>KUBE (bots.kube.dxos.org)</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 16</string>
+			<string>Monaco 15</string>
 			<key>Open Password Manager Automatically</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -2083,6 +2083,66 @@
 			<string>Search reflogs</string>
 			<key>value</key>
 			<string>for commit in $(git reflog|cut -d' ' -f1|sort|uniq); do echo $commit; git show $commit:$1 &amp;&gt;/dev/null | grep "$2"; done</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>565855BA-3FC9-440D-8CAA-460F046D1FE7</string>
+			<key>title</key>
+			<string>caffeinate</string>
+			<key>value</key>
+			<string>caffeinate</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>3A1F1C56-C5B0-4616-AE18-DB60E6D0B9CA</string>
+			<key>title</key>
+			<string>docker container ls -q -f "status=exited" | xargs -r docker rm</string>
+			<key>value</key>
+			<string>docker container ls -q -f "status=exited" | xargs -r docker rm</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>F4099539-5483-47D6-957C-4FF18994D741</string>
+			<key>title</key>
+			<string>netstat -lntu</string>
+			<key>value</key>
+			<string>netstat -lntu</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>3D7EC509-3829-4FF5-ABEC-B188789A12E2</string>
+			<key>title</key>
+			<string>SSH hash</string>
+			<key>value</key>
+			<string>ssh-keygen -l -v -f ~/.ssh/id_ed25519.pub</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>2AECAEFB-7E0B-43AE-9D76-5D0082046EF6</string>
+			<key>title</key>
+			<string>git reset --hard origin/main</string>
+			<key>value</key>
+			<string>git reset --hard origin/main</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>guid</key>
+			<string>D266E49E-4F1E-40CA-9F66-6F1374E170E4</string>
+			<key>title</key>
+			<string>git fetch &amp;&amp; git merge --no-ff --no-edi…</string>
+			<key>value</key>
+			<string>git fetch &amp;&amp; git merge --no-ff --no-edit origin/main</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
