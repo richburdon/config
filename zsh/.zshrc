@@ -36,7 +36,7 @@ antigen apply
 # TODO(burdon): https://docs.warp.dev/help/known-issues#list-of-incompatible-tools
 # ZSH_THEME="dxos"
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  ZSH_THEME="avit"
+  ZSH_THEME="dxos"
 fi
 
 # TODO(burdon): Move to antigen.
@@ -55,6 +55,7 @@ plugins=(
 
 export ZSH_CACHE_DIR=~/.zcompdump
 export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
+export ZSH_CUSTOM=~/.oh-my-zsh/custom
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
