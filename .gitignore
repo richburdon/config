@@ -9,6 +9,9 @@ tmp
 .zsh_history
 .zsh_sessions
 .zshrc.zwc
+.zshrc.pre*
+
+ohmyzsh/
 
 # Webstorm
 .idea/workspace.xml

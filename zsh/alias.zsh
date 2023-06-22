@@ -36,9 +36,6 @@ alias zed="code ~/.config-repo"
 alias up="rehash && exec zsh"
 
 # Git
-alias gb="git branch -vv"
-alias gs="git-branch-select -l"
-
 alias gc="git commit -a --allow-empty-message -m ''"
 # alias gc="git commit -a --amend --allow-empty-message -m ''"
 
@@ -50,6 +47,12 @@ alias gpp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 # TODO(burdon): Delete up-to-date branches?
 alias gdb="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+
+# https://github.com/nosarthur/gita
+alias gita="python3 -m gita"
+
+# Tools
+alias ws="webstorm"
 
 #
 # Search the local git reflog for string in specific file modified in commit.
@@ -84,44 +87,3 @@ function grep-files() {
   EXT=$3
   grep -l -R --include \*.${EXT:=ts} "$MATCH" ${ROOT:=./packages}
 }
-
-# https://github.com/nosarthur/gita
-alias gita="python3 -m gita"
-
-# https://github.com/dmaretskyi/monorepo-cd
-# eval "$(monorepo-cd --init m)"
-
-# NX
-# pnpm nx run-many --target=build
-# pnpm nx build <target> --watch
-# alias px="pnpm -w nx"
-
-# e.g., p build => pnpm -w nx build <current_directory>
-# function p () {
-  # px $1 "${PWD##*/}" "$@"
-# }
-
-# Run everything.
-# function pa () {
-  # pushd $(git rev-parse --show-toplevel)
-  # pnpm nx run-many --target=$1
-  # popd
-# }
-
-# Break NX cache.
-# function pc () {
-  # px $1 "${PWD##*/}" "$@" "${RANDOM}"
-# }
-
-# Clean and build.
-# alias fak="git pull && git clean -xdf && pnpm i && px run-many --target build"
-# alias ci="px run-many --target build && px run-many --target test && px run-many --target lint"
-
-# TODO: Implement with x
-# x build
-# x test
-# x - client-serv (complete)
-# beast client (draw graph)
-
-# Tools
-alias ws="webstorm"
