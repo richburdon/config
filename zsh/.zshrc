@@ -94,6 +94,13 @@ export PATH="$PNPM_HOME:$PATH"
 # bun completions
 [ -s "/Users/burdon/.bun/_bun" ] && source "/Users/burdon/.bun/_bun"
 
+# update tab title to current directory
+if [ $ITERM_SESSION_ID ]; then
+precmd() {
+  echo -ne "\033]0;${PWD##*/}\007"
+}
+fi
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
