@@ -25,4 +25,7 @@ export DX_ENVIRONMENT=${$(hostname)%.*}
 # DXOS
 export DXOS_ROOT="$HOME/Code/dxos"
 
-. "$HOME/.cargo/env"
+# Rust
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
