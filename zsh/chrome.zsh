@@ -22,8 +22,7 @@ chrome_profiles() {
     JQ=".profile.info_cache | [to_entries[] | {profile:.key, name:.value.name, user_name:.value.user_name}]"
 
     # Output table.
-    # https://github.com/uzimaru0000/tv (brew install uzimaru0000/tap/tv)
-    cat $DIR/$FILE | jq $JQ | tv
+    cat $DIR/$FILE | jq $JQ | jq -r '(["PROFILE", "NAME", "USERNAME"]), (.[] | [.profile, .name, .user_name]) | @tsv' | column -t -s $'\t'
   else
     if [ "$1" = "0" ]
     then
