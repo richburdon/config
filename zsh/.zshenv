@@ -22,6 +22,9 @@ export EDITOR=code
 # Node
 export NODE_OPTIONS="$NODE_OPTIONS --max-old-space-size=8192"
 
+# NX
+export NX_CLOUD_ACCESS_TOKEN="ZmI2MDQ2OTYtODYwMy00ZDE3LTg0YTgtOWRjNzc3NDk1Zjk0fHJlYWQtd3JpdGU="
+
 # DXOS Sentry logging
 export DX_ENVIRONMENT=${$(hostname)%.*}
 
