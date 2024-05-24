@@ -59,6 +59,9 @@ export ZSH_CUSTOM=~/.oh-my-zsh/custom
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
+# Starship prompt
+eval "$(starship init zsh)"
+
 #
 # iTerm
 #
@@ -109,6 +112,8 @@ test -e /Users/burdon/.zsh/.iterm2_shell_integration.zsh && source /Users/burdon
 # go
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
+
+DX_AC_ZSH_SETUP_PATH=/Users/burdon/Library/Caches/dx/autocomplete/zsh_setup && test -f $DX_AC_ZSH_SETUP_PATH && source $DX_AC_ZSH_SETUP_PATH; # dx autocomplete setup
 
 # TODO(burdon): Messes with prompt.
 # >>> conda initialize >>>
