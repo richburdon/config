@@ -18,6 +18,7 @@ ln -s $CONFIG/.npmrc $HOME/.npmrc
 #
 
 PACKAGES=(
+  astro
   corepack
   git-branch-select
   monorepo-cd
@@ -25,6 +26,7 @@ PACKAGES=(
   pnpm@7.9.0
   sort-package-json
   yarn
+  wrangler
 )
 
 for package in "${PACKAGES[@]}"; do

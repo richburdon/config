@@ -54,6 +54,9 @@ alias gita="python3 -m gita"
 # Tools
 alias ws="webstorm"
 
+# Cloudflare wrangler (pnpm add -g wrangler)
+alias w="wrangler"
+
 #
 # Search the local git reflog for string in specific file modified in commit.
 # Examples:
