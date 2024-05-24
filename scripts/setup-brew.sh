@@ -29,6 +29,7 @@ MODULES=(
   mosh          # https://mosh.org
   nginx
   openssl
+  python
   starship      # https://starship.rs
   zoxide
   zsh           # https://ohmyz.sh
