@@ -11,9 +11,6 @@ export HOMEBREW_NO_ANALYTICS=1
 # GPG
 export KEY_SERVER="hkp://pool.sks-keyservers.net"
 
-# NX
-export NX_CLOUD_ACCESS_TOKEN="ZmI2MDQ2OTYtODYwMy00ZDE3LTg0YTgtOWRjNzc3NDk1Zjk0fHJlYWQtd3JpdGU="
-
 # iTerm2
 export DISABLE_AUTO_TITLE="true"
 export HISTSIZE=10000
