@@ -37,9 +37,6 @@ export DX_WORKERS_API_KEY="EF07324B-2910-49EE-BB9C-7650BC10BF44"
 # TODO(burdon): Change name.
 export IPFS_API_SECRET=basic:dxos:stackystack
 
-# OpenAI
-export OPENAI_API_KEY="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"
-
 # Rust
 if [ -f "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
