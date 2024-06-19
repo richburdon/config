@@ -1,0 +1,54 @@
+# ~/.config/starship.toml
+# https://starship.rs/config
+# https://emojis.wiki/all-emojis
+
+format = "${custom}${all}"
+# format = "${all}"
+
+# https://starship.rs/config/#custom-commands
+[custom.repo]
+command = "/Users/burdon/Code/richburdon/config/bin/repo.sh"
+when = "git rev-parse --is-inside-work-tree"
+require_repo = true
+# format = "[$output 🐙 ](blue)"
+format = "🐙 "
+disabled = false
+
+# https://starship.rs/config/#status
+[status]
+symbol = '✖'
+format = '[$symbol$signal_name$maybe_int]($style) '
+map_symbol = true
+disabled = false
+
+# https://starship.rs/config/#directory
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+style = 'gray'
+repo_root_style = 'blue'
+repo_root_format = '\[[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)\][$path]($style)[$read_only]($read_only_style) '
+truncation_length = 0
+
+# https://starship.rs/config/#git-branch
+[git_branch]
+symbol = '🌱'
+format = '[$symbol \($branch(:$remote_branch)\)]($style) '
+# ignore_branches = ['master', 'main']
+
+# https://starship.rs/config/#git-branch
+[git_status]
+diverged = '😵'
+modified = '*'
+stashed = ''
+untracked = '+'
+up_to_date = ''
+conflicted = '='
+ahead = '⇡${count}'
+behind = '⇣${count}'
+
+# https://starship.rs/config/#node-js
+[nodejs]
+format = '[$version](bold green) '
+
+[dotnet]
+disabled = true
