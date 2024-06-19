@@ -1,6 +1,6 @@
 #
 # Aliases
-# 
+#
 
 alias ls="gls --color=tty"
 alias l="ls -l -og --time-style=long-iso"
@@ -37,7 +37,7 @@ alias up="rehash && exec zsh"
 
 # Git
 alias gc="git commit -a --allow-empty-message -m ''"
-# alias gc="git commit -a --amend --allow-empty-message -m ''"
+alias repo="git remote get-url origin 2>/dev/null | sed -n 's#.*/\([^.]*\)\.git#\1#p'"
 
 # Update main then merge with this branch.
 alias gmm="git fetch && git merge --no-ff --no-edit origin/main"
@@ -74,12 +74,12 @@ function grep-log() {
   if [ -n "$2" ]; then
     obj=":$2"
   fi
-  for commit in $(git reflog|cut -d' ' -f1|sort|uniq); 
-  do 
+  for commit in $(git reflog|cut -d' ' -f1|sort|uniq);
+  do
     # echo "[$commit$obj]"
     # TODO(burdon): Show matching file (and line?)
     git show "$commit$obj" &>/dev/null | grep -i "$1" | \
-      while read line; do echo "$commit $line"; done; 
+      while read line; do echo "$commit $line"; done;
   done
 }
 

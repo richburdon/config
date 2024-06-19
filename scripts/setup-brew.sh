@@ -30,6 +30,8 @@ MODULES=(
   nginx
   openssl
   python
+  starship      # https://starship.rs
+  zoxide
   zsh           # https://ohmyz.sh
 )
 
