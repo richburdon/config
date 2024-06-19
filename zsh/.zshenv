@@ -34,6 +34,12 @@ export DX_ENVIRONMENT=${$(hostname)%.*}
 # DXOS CF Workers
 export DX_WORKERS_API_KEY="EF07324B-2910-49EE-BB9C-7650BC10BF44"
 
+# DXOS IPFS.
+export IPFS_API_SECRET=basic:dxos:stackystack
+
+# Runtime (for CLI, etc.)
+export DXOS_FORCE_AUTOMERGE=true
+
 # TODO(burdon): Change name.
 export IPFS_API_SECRET=basic:dxos:stackystack
 
